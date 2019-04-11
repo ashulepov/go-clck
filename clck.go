@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// ShortURL returns short url from clck.ru service
+// ShortURL returns short URL from clck.ru service
 func ShortURL(url string) (string, error) {
 	client := &http.Client{}
 	resp, err := client.Get(`https://clck.ru/--?url=` + url)
