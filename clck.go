@@ -15,5 +15,5 @@ func ShortURL(longURL string) (string, error) {
 	}
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
-	return string(body), nil
+	return string(body), err
 }
